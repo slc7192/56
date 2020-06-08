@@ -1,0 +1,193 @@
+.profess_text {
+  width: 650px;
+  height: 310px;
+}
+.video_intro {
+  width: 510px;
+  height: 305px;
+}
+.video_intro video {
+  width: 100%;
+  height: 100%;
+}
+.color_tit {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.color_tit1 {
+  color: #738db3;
+}
+.color_tit2 {
+  color: #1e2629;
+}
+.profess_text {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+  padding-top: 5px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 15;
+  -webkit-box-orient: vertical;
+  height: 100%;
+  line-height:22px;
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+.grey_line {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+  border-top: 1px solid #e3eaf0;
+  margin-bottom: 20px;
+}
+.pro_photo {
+  width: 190px;
+  margin: 10px;
+  height: 150px;
+}
+.course_name {
+  padding: 2px 25px 2px 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+}
+.course_tit {
+  border-top: 3px solid #4f8ef0;
+  height: 55px;
+  line-height: 55px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  color: #1e2629;
+}
+.course_text {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+  padding-top: 5px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  height: 100%;
+}
+/* .course_introduce {
+  -webkit-line-clamp: 9;
+} */
+
+.album{
+  background: #1f7387;
+  padding: 15px;
+  margin-top: 15px;
+}
+.album_item{
+  width: 25%;
+  margin-bottom: 10px;
+}
+.album_item_img{
+  width: 270px;
+  height: 270px;
+}
+
+/* 遮罩层 */
+.ab_pannel{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1024;
+  background: #0b0b0b; 
+  opacity: 0.9; 
+}
+.con_panel{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;        
+  display: flex;
+  justify-content: center;
+}
+.con_pannel_body {
+  width: 500px;
+  height: 500px;
+}
+.con_pannel_img {
+  width: 100%;
+  height: 100%;
+}
+p{
+  margin: 5px 0 ;
+  text-indent: 33px !important;
+  
+  line-height: 20px
+}
+.pic_box{
+  width: 420px
+}
+.info_p{
+  text-indent:0px;
+  margin-top: 15px
+}
+.info_tro{
+  display: inline-block;
+  font-size:32px;
+  color: #1f7387;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  position: relative;
+  left: -20px
+}
+.school_img{
+  width:252px;
+  height:189px;
+  margin: 10px;
+}
+.school_img img{
+  width:100%;
+  height:100%;
+}
+.school_img_center{
+  display: flex;
+  justify-content: flex-start;
+  margin-top:10px;
+}
+.spc_txt{
+display: inline-block;
+}
+.environment {
+font-family: 'MissYua';
+font-size:41px;
+color:#4f8ef0;
+letter-spacing: -6px;
+}
+.school_img_box{
+width:544px;
+}
+.spc_margin{
+margin-bottom: 0px;
+}
+.school_index{
+color:#738db3;
+}
+.school_m{
+margin:0 5px;
+}

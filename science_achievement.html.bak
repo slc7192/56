@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>标题</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/element.css" />
+    <link rel="stylesheet" href="./css/head.css" />
+    <link rel="stylesheet" href="./css/ic_science_mian_lab.css" />
+    <style>
+      .s_width {
+        width: 100%;
+      }
+      .s_img_p {
+        margin: 0 auto;
+        padding-top:0!important;
+      }
+      .school_index{
+  color:#738db3;
+  }
+  .school_m{
+  margin:0 5px;
+  }
+  .margin_bottom{
+   margin-bottom: 40px;
+  }
+  
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <!-- 顶部导航 -->
+        <div class="home_nav_top">
+          <div class="container_1200 row_flex al_flex be_flex ">
+            <div class="home_nav_top_left">
+              <img v-cloak :src="headerLogo.data_img" alt="" />
+            </div>
+            <div class="row_flex ar_flex end_flex al_flex ">
+                <!-- 导航栏 -->
+                <div v-for="(value,index) of linkItems.children" :key="index">
+                    <a v-if="value.target_id1=='0'" class="nav_top_item"  href="../../../../pc/index.html">
+                        {{value.navigation_name}}
+                    </a>
+                    <a v-else class="nav_top_item"  :href=`school.html?target_id1=${value.target_id1}`>
+                        {{value.navigation_name}}
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- banner图片 -->
+        <div class="bg_banner img_flex">
+          <img class="bg_banner_img" :src="bannerUrl.event_img" alt="" />
+        </div>
+
+        <!-- 内容 -->
+        <div style="height:10px;"></div>
+        <div class="container_1200 ">
+          <div>
+            <div>
+              <a v-if="resBody.column_pid!=''" :href="`school.html?target_id1=${resBody.column_pid}`" class="school_index">
+              <span class=" color_tit color_tit1">{{resBody.column_pid_name}}</span><span class="school_m">/</span>
+            </a>
+              <span class=" color_tit color_tit2">{{resBody.column_name}}</span>
+            </div>
+          </div>
+        </div>
+<!-- 内容 -->
+      <div class="margin_bottom" v-if="articles.length>0">
+        <div class="grey_line" v-for="(v,k) of articles">
+          <div class="container_1200 row_flex be_flex  ">
+            <div class="s_width">
+              <div><span class="course_tit">{{v.article_name}}</span></div>
+              <div>
+                <div class="profess_text course_introduce s_img_p">
+                  <img
+                    :src="v.article_picture[0].file_img"
+                    alt=""
+                    style="width: 650px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <!-- 页底 -->
+        <footer>
+          <div class="container_1200 row_flex be_flex al_flex">
+            <div class="col_flex be_flex">
+              <div class="row_flex ">
+                <div class="col_flex wr_flex foot_nav ">
+                  <!-- 底部左侧导航 -->
+                    <!-- <a v-for="(v,i) of resFooter.linkItems" :key="i" href="#" class="foot_top_item" >{{v.navigation_name}}</a> -->
+                    <a v-for="(value,index) of resFooter.linkItems" :key="index" class="foot_top_item" :href=`school.html?target_id1=${value.target_id1}`>
+                      {{value.navigation_name}}
+                  </a>
+                </div>
+                <div class="col_flex wr_flex foot_info ">
+                  <a class="foot_top_item">{{resFooter.enrollment_link.data_name}} : {{resFooter.enrollment_link.data_remark}}</a>
+                  <a class="foot_top_item">{{resFooter.professional_consultation.data_name}} : {{resFooter.professional_consultation.data_remark}}</a>
+                  <a class="foot_top_item">
+                      {{resFooter.copyright.data_name}} : {{resFooter.copyright.data_remark}}
+                  </a>
+                  <a class="foot_top_item">
+                      {{resFooter.address.data_name}} : {{resFooter.address.data_remark}}
+                  </a>
+                </div>
+              </div>
+              <div class="school_addr">
+                  <!--底部学校介绍 -->
+                  {{resFooter.school_introduction.data_remark}}
+              </div>
+            </div>
+            <div><img :src="resFooter.logo2.data_img" alt="" /></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- 引入js -->
+    <script src="./publicJs/pub.js"></script>
+    <script src="./publicJs/jquery-1.12.4.js"></script>
+    <script src="./publicJs/axios.js"></script>
+    <script src="./publicJs/vue.js"></script>
+    <script src="./publicJs/element.js"></script>
+    <script src="./addJs/ic_school_honer.js"></script>
+    <script src="./addJs/ic_foot.js"></script>
+  </body>
+</html>

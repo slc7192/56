@@ -1,0 +1,143 @@
+.profess_text {
+  width: 650px;
+  height: 310px;
+}
+.video_intro {
+  width: 510px;
+  height: 305px;
+}
+.video_intro video {
+  width: 100%;
+  height: 100%;
+}
+.color_tit {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.color_tit1 {
+  color: #738db3;
+}
+.color_tit2 {
+  color: #1e2629;
+}
+.profess_text {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+  padding-top: 5px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 15;
+  -webkit-box-orient: vertical;
+  height: 100%;
+}
+.grey_line {
+  width: 100%;
+  margin-top: 10px;
+  border-top: 1px solid #e3eaf0;
+}
+.pro_photo {
+  width: 190px;
+  margin: 10px;
+}
+.course_name {
+  padding: 2px 25px 2px 0;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+}
+.course_tit {
+  border-top: 3px solid #1f7387;
+  height: 55px;
+  line-height: 55px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  color: #1e2629;
+}
+.course_text {
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+  padding-top: 5px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  height: 100%;
+}
+.course_introduce {
+  -webkit-line-clamp: 9;
+}
+
+.album{
+  background: #1f7387;
+  padding: 15px;
+  margin-top: 15px;
+}
+.album_item{
+  width: 25%;
+  margin-bottom: 10px;
+}
+.album_item_img{
+  width: 270px;
+  height: 270px;
+}
+
+/* 遮罩层 */
+.ab_pannel{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1024;
+  background: #0b0b0b; 
+  opacity: 0.9; 
+}
+.con_panel{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;        
+  display: flex;
+  justify-content: center;
+}
+.con_pannel_body {
+  width: 500px;
+  height: 500px;
+}
+.con_pannel_img {
+  width: 100%;
+  height: 100%;
+}
+
+.honer_img{
+  width: 650px;
+  height: 367px;
+  margin: 15px 0;
+}
+.honer_img3{
+  width: 650px;
+  height: 560px;
+  margin: 15px 0;
+}

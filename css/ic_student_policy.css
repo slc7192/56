@@ -1,0 +1,67 @@
+.add_photo {
+  width: 320px;
+  height: 240px;
+}
+.add_us {
+  width: 320px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #07256d;
+  color: white;
+  /* margin-top: 25px; */
+  padding-left: 10px;
+}
+.add_us_tit {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+ 
+  padding: 7px 10px;
+  color: #3070ff;
+}
+.add_us_line{
+  color: #07256d;
+  border-bottom: 1px solid #07256d
+}
+.box_sadow{
+  box-shadow: 0px 0px 9px 0px 
+    rgba(4, 7, 6, 0.2);
+    /* margin-top: 50px; */
+}
+.add_us_introduce{
+  width: 72%;
+}
+.color_tit {
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.color_tit1 {
+  color: #738db3;
+}
+.color_tit2 {
+  color: #1e2629;
+}
+.con_tittle{
+  height: 50px;
+  line-height: 50px;
+}
+.con_times{
+  font-size: 12px;
+  color: #666;
+  height: 30px;
+  line-height: 30px;
+}
+p img{
+  width: 95%;
+}
+.school_index{
+  color:#738db3;
+  }
+.school_m{
+  margin:0 5px;
+  }

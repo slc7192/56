@@ -1,0 +1,174 @@
+.news_tittle {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    color: #738db3;
+}
+.school_index{
+    color:#738db3;
+    }
+.new_info {
+    padding: 25px;
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    color: #1e2629;
+    text-align: justify;
+}
+.new_news {
+    width: 320px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #07256d;
+    color: #fff;
+    margin-top: 25px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.new_news_tit {
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+    color: #3070ff;
+    display: block;
+   
+}
+.under_line {
+    border-bottom: 1px solid transparent;
+}
+.new_news_tit:hover .under_line {
+    color: #07256d;
+    border-bottom: 1px solid #07256d
+}
+.new_news_tit_first {
+    margin-top: 5px;
+}
+.box_sadow {
+    box-shadow: 0px 0px 9px 0px  rgba(4, 7, 6, 0.2);
+    
+}
+.new_news_introduce {
+    width: 72%;
+}
+.new_margin {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+.news_general_tit {
+    color: #1e2629;
+}
+.news_content_title {
+    font-family: "SourceHanSansCN-Regular";
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e2629;
+    margin-bottom: 10px;
+}
+.new_content_time {
+    font-family: SourceHanSansCN-Regular;
+    font-size: 14px;
+    font-weight: normal;
+    color: #1e2629;
+    margin-bottom: 30px;
+}
+.news_text {
+    font-size: 16px;
+}
+.news_text p {
+    margin-bottom: 15px;
+}
+.new_content_b {
+    font-weight: bold;
+}
+.new_center {
+    text-align: center;
+}
+.new_content_img {
+    width: 500px;
+    height: 332px;
+    text-align: center;
+    display: inline-block;
+}
+.new_content_img img {
+    width: 100%;
+    height: 100%;
+}
+.after_pag {
+    color: #738db3;
+}
+.n1{
+    width: 707px;
+    height: 413px;
+}
+.n2{
+    width: 707px;
+    height: 413px;
+}
+.n3{
+    width: 650px;
+    height: 432px;
+}
+.n4{
+    width: 650px;
+    height: 432px;
+}
+.n5{
+    width: 650px;
+    height: 432px;
+}
+.n8{
+     width: 556px;
+     height: 368px;
+ }
+.n9{
+    width: 556px;
+    height: 368px;
+}
+.n10{
+    width: 556px;
+    height: 368px;
+}
+.n11{
+    width: 556px;
+    height: 368px;
+}
+.n12{
+    width: 578px;
+    height: 387px;
+}
+.n13{
+    width: 578px;
+    height: 387px;
+}
+.n14{
+    width: 500px;
+    height: 488px;
+}
+.n15{
+    width: 513px;
+    height: 417px;
+}
+.n16{
+    width: 543px;
+    height: 360px;
+}
+.act_line{
+    border-bottom: 1px solid 
+    
+}
+p{
+    text-indent: 33px
+}
+.new_lit_list>div>a{
+    width:300px;
+    overflow: hidden;/*超出部分隐藏*/
+    white-space: nowrap;/*不换行*/
+    text-overflow:ellipsis;/*超出部分文字以...显示*/
+}
+.fot{
+    width:60px;
+}

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>智能学院</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/element.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/head.css" />
+    <style>
+        .con_top_photo img {
+            width: 100%;
+            height: 100%;
+        }
+        .el-carousel__item h3 {
+            color: #475669;
+            font-size: 18px;
+            opacity: 0.75;
+            line-height: 300px;
+            margin: 0;
+        }
+
+        .el-carousel__item:nth-child(2n) {
+            background-color: #99a9bf;
+        }
+        .el-carousel{
+            width:100%;
+            height: 100%;
+        }
+        .el-carousel__arrow--right{
+            right:16px;
+        }
+        .el-carousel__arrow--left{
+            left:16px;
+        }
+        .el-carousel__arrow{
+            background-color: rgba(31,45,61,.31)
+        }
+        .el-carousel__arrow:hover{
+            background-color: rgba(31,45,61,.71)
+        }
+        .el-carousel__arrow i :hover {
+            color:#fff;
+        }
+        .el-carousel__arrow i{
+            font-size:20px;
+            color:#fff;
+        }
+        .el-carousel__item:nth-child(2n + 1) {
+            background-color: #d3dce6;
+        }
+        .el-carousel__container {
+            width: 574px;
+            height:100%;
+        }
+        .carouse_img {
+            width: 100%;
+            height: 100%;
+        }
+        .news_banner {
+            width: 574px;
+            height: 320px;
+            margin-top:10px;
+            padding:0 10px;
+            margin-left:100px;
+        }
+        .el-carousel-item {
+            position: relative;
+        }
+        .news_banner_into {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 9999999;
+            height: 50px;
+            background-color: #000000;
+            opacity: 0.56;
+            width: 100%;
+        }
+        .news_banner_into_text {
+            width: 98%;
+            height: 50px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #ffffff;
+            line-height: 50px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 30px;
+        }
+        .el-carousel__indicators {
+            display: none;
+        }
+        .el-carousel{
+            display: flex;
+            justify-content: center;
+        }
+        .school_index{
+            color:#738db3;
+        }
+        .school_m{
+            margin:0 5px;
+        }
+        .index_a{
+            box-shadow: none;
+            transition: all 0.8s;
+        }
+        .index_a:hover{
+            box-shadow: 0px 0px 5px 0px rgba(4, 7, 6, 0.11);
+        }
+        .container{
+            padding:10px 14px 10px;
+        }
+        [v-cloak]{
+            display:none!important;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div>
+        <!-- 顶部导航 -->
+        <div class="home_nav_top">
+            <div class="container_1200 row_flex al_flex be_flex ">
+                <div class="home_nav_top_left">
+                    <!-- logo -->
+                    <img src="http://192.168.35.246:80/CMS/download/20191122104654_logo.png" />
+                </div>
+                <div class="row_flex ar_flex end_flex al_flex ">
+                    <!-- 顶部右侧导航菜单 -->
+                                    <a href="preIndex.html" class="nav_top_item" >
+                                        首页
+                                    </a>
+                                    <a href="school.html?target_id1=4201911221011649" class="nav_top_item" >
+                                        学院概况
+                                    </a>
+                                    <a href="school.html?target_id1=5201911221011746" class="nav_top_item" >
+                                        科学研究
+                                    </a>
+                                    <a href="school.html?target_id1=5201911221011964" class="nav_top_item" >
+                                        专业介绍
+                                    </a>
+                                    <a href="school.html?target_id1=3201911221011271" class="nav_top_item" >
+                                        招生就业
+                                    </a>
+                                    <a href="school.html?target_id1=7201911221011168" class="nav_top_item" >
+                                        党建园地
+                                    </a>
+                                    <a href="school.html?target_id1=7201911221011405" class="nav_top_item" >
+                                        学生工作
+                                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="banner">
+                <!-- 上面banner图片展示 -->
+                <img v-cloak class="banner_video" src="http://192.168.35.246:80/CMS/download/20191122102812_home.png" alt="" />
+            </div>
+        </div>
+        <div>
+            <div class="container_1200 container clearfix ">
+                <!-- 主题内容展示 -->
+                        <a  href="school.html?target_id1=4201911221011649" class="index_a">
+                            <div class="contain_float">
+                                <div class="con_top_photo">
+                                    <img src="http://192.168.35.246:80/CMS/download/20191122101945_index_1.png" alt="" />
+                                </div>
+                                <div class="con_info">
+                                    <div class="con_list_tit">学院概况</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a  href="school.html?target_id1=5201911221011964" class="index_a">
+                            <div class="contain_float">
+                                <div class="con_top_photo">
+                                    <img src="http://192.168.35.246:80/CMS/download/20191122102017_index_ws_2.png" alt="" />
+                                </div>
+                                <div class="con_info">
+                                    <div class="con_list_tit">专业介绍</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a  href="school.html?target_id1=5201911221011746" class="index_a">
+                            <div class="contain_float">
+                                <div class="con_top_photo">
+                                    <img src="http://192.168.35.246:80/CMS/download/20191122102041_enroll_3.png" alt="" />
+                                </div>
+                                <div class="con_info">
+                                    <div class="con_list_tit">科学研究</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a  href="school.html?target_id1=3201911221011271" class="index_a">
+                            <div class="contain_float">
+                                <div class="con_top_photo">
+                                    <img src="http://192.168.35.246:80/CMS/download/20191122102118_enroll_1.png" alt="" />
+                                </div>
+                                <div class="con_info">
+                                    <div class="con_list_tit">招生就业</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a  href="school.html?target_id1=7201911221011168" class="index_a">
+                            <div class="contain_float">
+                                <div class="con_top_photo">
+                                    <img src="http://192.168.35.246:80/CMS/download/20191122102139_party.png" alt="" />
+                                </div>
+                                <div class="con_info">
+                                    <div class="con_list_tit">党建园地</div>
+                                </div>
+                            </div>
+                        </a>
+                        <a  href="school.html?target_id1=7201911221011405" class="index_a">
+                            <div class="contain_float">
+                                <div class="con_top_photo">
+                                    <img src="http://192.168.35.246:80/CMS/download/20191122102211_back.png" alt="" />
+                                </div>
+                                <div class="con_info">
+                                    <div class="con_list_tit">学生工作</div>
+                                </div>
+                            </div>
+                        </a>
+                <div class="contain_float">
+                    <!-- 轮播图左侧新闻展示 -->
+                    <div class="con_white">
+                             <div class="con_white_tit">新闻中心</div>
+                        <div class="line_new"></div>
+                        <div class="con_ma_list col_flex">
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=3201911221511382"
+                                    >学校中期工作推进现场会走进智能工程学院</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=1201911221511258"
+                                    >智能工程学院举行共建大会暨团建活动</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=6201911221511892"
+                                    >2019年国家级工业机器人技术、新能源汽车技术“双师型”教师专业技能培训在河南机电职业学院开班</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=6201911221611705"
+                                    >河南机电职业学院与格力智能装备签署战略合作协议</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=5201911221611351"
+                                    >国务院副总理孙春兰接见我校智能工程学院院长张黎燕</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=5201911221611398"
+                                    >省长陈润儿莅临智能工程学院调研</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=820191122161111"
+                                    >第六届河南省大学生机器人竞赛在河南机电职业学院举办</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=8201911221611466"
+                                    >我院2018-2019学年“超凡杯”学生技能大赛今日开赛</a
+                                    >
+                                    <a  class="new_tit" href="NewsInfo.html?column_id=9201911221011166&article_id=9201911221611552"
+                                    >智能工程学院举行颁奖典礼</a
+                                    >
+                        </div>
+                    </div>
+                </div>
+                <div class="news_banner">
+                    <!-- 轮播图 -->
+                    <el-carousel :interval="3000" arrow="always">
+                                <el-carousel-item>
+                                    <img class="carouse_img" src="http://192.168.35.246:80/CMS/download/20191122103129_6.JPG" alt="" />
+                                </el-carousel-item>
+                                <el-carousel-item>
+                                    <img class="carouse_img" src="http://192.168.35.246:80/CMS/download/20191122103121_5.JPG" alt="" />
+                                </el-carousel-item>
+                                <el-carousel-item>
+                                    <img class="carouse_img" src="http://192.168.35.246:80/CMS/download/20191122103112_4.JPG" alt="" />
+                                </el-carousel-item>
+                                <el-carousel-item>
+                                    <img class="carouse_img" src="http://192.168.35.246:80/CMS/download/20191122103104_3.JPG" alt="" />
+                                </el-carousel-item>
+                                <el-carousel-item>
+                                    <img class="carouse_img" src="http://192.168.35.246:80/CMS/download/20191122103057_2.JPG" alt="" />
+                                </el-carousel-item>
+                                <el-carousel-item>
+                                    <img class="carouse_img" src="http://192.168.35.246:80/CMS/download/20191122103049_1.JPG" alt="" />
+                                </el-carousel-item>
+                    </el-carousel>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页底 -->
+        <footer>
+            <div class="container_1200 row_flex be_flex al_flex">
+                <div class="col_flex be_flex">
+                    <div class="row_flex ">
+                        <div class="col_flex wr_flex foot_nav ">
+                            <!-- 底部左侧栏目 -->
+                                    <a href="preIndex.html" class="foot_top_item" >
+                                        首页
+                                    </a>
+                                    <a href="school.html?target_id1=4201911221011649" class="foot_top_item" >
+                                        学院概况
+                                    </a>
+                                    <a href="school.html?target_id1=5201911221011746" class="foot_top_item" >
+                                        科学研究
+                                    </a>
+                                    <a href="school.html?target_id1=5201911221011964" class="foot_top_item" >
+                                        专业介绍
+                                    </a>
+                                    <a href="school.html?target_id1=3201911221011271" class="foot_top_item" >
+                                        招生就业
+                                    </a>
+                                    <a href="school.html?target_id1=7201911221011168" class="foot_top_item" >
+                                        党建园地
+                                    </a>
+                                    <a href="school.html?target_id1=7201911221011168" class="foot_top_item" >
+                                        学生工作
+                                    </a>
+                        </div>
+                        <div class="col_flex wr_flex foot_info ">
+                                <a class="foot_top_item">招生联系:13526566316 付老师</a>
+                            <!-- 专业咨询 -->
+                                <a class="foot_top_item">专业咨询:15890169891 刘老师</a>
+                            <!-- 版权所有 -->
+                                <a class="foot_top_item">版权所有:河南机电职业学院智能学院</a>
+                            <!-- 院校地址 -->
+                                <a class="foot_top_item">地址:郑州市南大学城泰山路1号（新郑市龙湖镇）</a>
+                        </div>
+                    </div>
+                    <!-- 院校信息 -->
+                    <div class="school_addr">
+                        <!-- 院校介绍信息 -->
+                            河南机电职业学院与国内多家智能制造企业战略合作，共同成立了智能工程学院。按照学校“三融四境”办学理念，在学生培养和教师团队建设方面，着力打造产、学、研、创“四境”育人“双体系”。
+                    </div>
+                </div>
+                <!-- logo图标 -->
+                    <div><img src="http://192.168.35.246:80/CMS/download/20191122104654_logo.png" alt="" /></div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- 引入js -->
+<script src="./publicJs/pub.js"></script>
+<script src="./publicJs/jquery-1.12.4.js"></script>
+<script src="./publicJs/axios.js"></script>
+<script src="./publicJs/vue.js"></script>
+<script src="./publicJs/element.js"></script>
+<script src="./addJs/ic_index.js"></script>
+<script src="./addJs/ic_footer.js"></script>
+
+</body>
+</html>

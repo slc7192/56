@@ -1,0 +1,153 @@
+html {
+  background-color: #e5ebeb;
+}
+/* 视频 */
+.explore {
+  width: 100%;
+  height: 48px;
+  background-color: #07256d;
+  font-size: 22px;
+  color: white;
+  position: relative;
+  top: -40px;
+  letter-spacing: 2px;
+}
+.banner_video {
+  width: 100%;
+  height: 100%;
+}
+.down_img {
+  position: relative;
+  top: 3px;
+  left: 5px;
+}
+/* 内容列表 */
+.container {
+  padding: 5px 14px 10px;
+  background-color: #f3f6f6;
+  display: flex;
+  flex-wrap: wrap;
+}
+.con_top_photo {
+  width: 360px;
+  height: 160px;
+}
+.con_info {
+  background: #065c95;
+  padding: 10px;
+  color: white;
+}
+.con_list_tit {
+  font-family: SourceHanSansCN-Light;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.con_tit_info {
+  font-family: SourceHanSansCN-Light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #ffffff;
+  margin: 5px 0;
+}
+.con_ma_list_item {
+  font-family: SourceHanSansCN-Light;
+  font-size: 14px;
+  color: #52d9ff;
+}
+.contain_float {
+  /* float: left; */
+  margin: 10px 15px;
+  width: 360px;
+}
+.inner {
+  background: #07256d;
+  width: 360px;
+  height: 75px;
+  margin-top: 17px;
+  padding: 10px;
+}
+.con_white {
+  background: white;
+  padding: 10px;
+}
+.college_info {
+  width: 338px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+}
+.con_white_tit {
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #1e2629;
+  margin: 0px 0 5px;
+}
+.line_color {
+  height: 8px;
+  background-color: #065c95;
+  width: 100%;
+}
+.new_tit {
+  font-family: SourceHanSansCN-Light;
+  font-size: 16px;
+  color: #065c95;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 30px;
+}
+.con_white_text {
+  font-family: SourceHanSansCN-Light;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #ffffff;
+  color: #1e2629;
+}
+.party_items {
+  font-family: SourceHanSansCN-Regular;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 1px;
+  color: #3070ff;
+  padding: 3px;
+}
+.party_items_act {
+  color: #3070ff;
+  border-bottom: 1px solid #3070ff;
+}
+
+.over_hide_1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 95%;
+}
+.over_hide_2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line_new{
+  height: 2px;
+  background-color: #065c95;
+  width: 100%;
+}

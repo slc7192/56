@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>学院简介</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/element.css" />
+    <link rel="stylesheet" href="./css/head.css" />
+    <link rel="stylesheet" href="./css/ic_school_info.css" />
+    <style>
+      @font-face {
+      font-family: 'MissYua';
+      src: url("./css/fonts/MissYuan.woff") format('woff');
+      }
+      .school_content{
+      margin-bottom:44px;
+      }
+      [v-cloak]{
+      display: none!important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <!-- 顶部导航 -->
+        <div class="home_nav_top">
+            <div class="container_1200 row_flex al_flex be_flex ">
+              <div class="home_nav_top_left">
+                <img v-cloak :src="headerLogo.data_img" alt="" />
+              </div>
+              <div class="row_flex ar_flex end_flex al_flex ">
+                  <!-- 导航栏 -->
+                  <div v-for="(value,index) of linkItems.children" :key="index">
+                      <a v-if="value.target_id1=='0'" class="nav_top_item"  href="../../../../pc/index.html">
+                          {{value.navigation_name}}
+                      </a>
+                      <a v-else class="nav_top_item"  :href=`school.html?target_id1=${value.target_id1}`>
+                          {{value.navigation_name}}
+                      </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <!-- banner图片 -->
+          <div class="bg_banner img_flex">
+            <img class="bg_banner_img" :src="bannerUrl.event_img" alt="" />
+          </div>
+
+        <!-- 内容 -->
+        <div style="height:10px;"></div>
+        <div class="container_1200">
+          <div>
+            <a v-if="resBody.column_pid!=''"  :href="`school.html?target_id1=${resBody.column_pid}`" class="school_index">
+            <span class=" color_tit color_tit1">{{resBody.column_pid_name}}</span><span class="school_m">/</span>
+          </a>
+            <span class=" color_tit color_tit2">{{resBody.column_name}}</span>
+          </div>
+        </div>
+
+        <div class="grey_line">
+          <div class="container_1200 row_flex be_flex  ">
+            <div>
+              <div v-if="articles.length>0"><span class="course_tit">{{articles[0].article_name}}</span></div>
+              <div>
+                <div v-cloak class="profess_text course_introduce" v-if="articles.length>0" v-html="articles[0].ueditor_text">
+                  <!-- 文章详情 -->
+                  {{articles[0].ueditor_text}}
+                </div>
+              </div>
+            </div>
+            <div class="school_img_center" v-if="articles.length>0">
+              <div class="school_img" v-for="(v,k) of articles[0].article_picture">
+                <img  :src="v.file_img" alt="" />
+              </div>
+              <!-- <div class="school_img">
+                  <img src="./img/school_2.png" alt="" />
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="grey_line spc_margin">
+          <div class="container_1200 row_flex be_flex" v-if="articles.length>0">
+            <div>
+                <div v-if="articles.length>1"><span class="course_tit">{{articles[1].article_name}}</span></div>
+              <div>
+                <div class="profess_text course_introduce" v-if="articles.length>1" v-html="articles[1].ueditor_text">
+                  {{articles[1].ueditor_text}}
+                </div>
+              </div>
+            </div class="school_img_center">
+            <div class="wr_flex row_flex pic_box school_img_box" v-if="articles.length>1">
+                <div class="school_img" v-for="(v,k) of articles[1].article_picture">
+                    <img  :src="v.file_img" alt="" />
+                  </div>
+              </div>      
+            </div>
+          </div>
+        </div>
+
+        <!-- 页底 -->
+        <footer>
+            <div class="container_1200 row_flex be_flex al_flex">
+              <div class="col_flex be_flex">
+                <div class="row_flex ">
+                  <div class="col_flex wr_flex foot_nav ">
+                    <!-- 底部左侧导航 -->
+                      <!-- <a v-for="(v,i) of resFooter.linkItems" :key="i" href="#" class="foot_top_item" >{{v.navigation_name}}</a> -->
+                      <a v-for="(value,index) of resFooter.linkItems" :key="index" class="foot_top_item" :href=`school.html?target_id1=${value.target_id1}`>
+                        {{value.navigation_name}}
+                    </a>
+                  </div>
+                  <div class="col_flex wr_flex foot_info ">
+                    <a class="foot_top_item">{{resFooter.enrollment_link.data_name}} : {{resFooter.enrollment_link.data_remark}}</a>
+                    <a class="foot_top_item">{{resFooter.professional_consultation.data_name}} : {{resFooter.professional_consultation.data_remark}}</a>
+                    <a class="foot_top_item">
+                        {{resFooter.copyright.data_name}} : {{resFooter.copyright.data_remark}}
+                    </a>
+                    <a class="foot_top_item">
+                        {{resFooter.address.data_name}} : {{resFooter.address.data_remark}}
+                    </a>
+                  </div>
+                </div>
+                <div class="school_addr">
+                    <!--底部学校介绍 -->
+                    {{resFooter.school_introduction.data_remark}}
+                </div>
+              </div>
+              <div><img :src="resFooter.logo2.data_img" alt="" /></div>
+            </div>
+          </footer>
+      </div>
+    </div>
+    <!-- 引入js -->
+    <script src="./publicJs/pub.js"></script>
+    <script src="./publicJs/jquery-1.12.4.js"></script>
+    <script src="./publicJs/axios.js"></script>
+    <script src="./publicJs/vue.js"></script>
+    <script src="./publicJs/base.js"></script>
+    <script src="./publicJs/element.js"></script>
+    <script src="./addJs/ic_foot.js"></script>
+    <script src="./addJs/ic_school_info.js"></script>
+  </body>
+</html>

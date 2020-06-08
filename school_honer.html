@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>标题</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/element.css" />
+    <link rel="stylesheet" href="./css/head.css" />
+    <link rel="stylesheet" href="./css/ic_school_honer.css" />
+    <style>
+      .el-carousel__item h3 {
+        color: #475669;
+        font-size: 18px;
+        opacity: 0.75;
+        line-height: 300px;
+        margin: 0;
+      }
+
+      .el-carousel__item:nth-child(2n) {
+        background-color: #99a9bf;
+      }
+
+      .el-carousel__item:nth-child(2n + 1) {
+        background-color: #d3dce6;
+      }
+      .el-carousel__container {
+        width: 900px;
+        height:536px;
+      }
+      .carouse_img {
+        width: 100%;
+        height: 100%;
+      }
+      .news_banner {
+        width: 1200px;
+        height: 600px;
+        margin: 20px auto 0;
+      }
+      .el-carousel-item {
+        position: relative;
+      }
+      .news_banner_into {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 9999999;
+        height: 50px;
+        background-color: #000000;
+        opacity: 0.56;
+        width: 100%;
+      }
+      .news_banner_into_text {
+        width: 98%;
+        height: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #ffffff;
+        line-height: 50px;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 30px;
+      }
+      .el-carousel__indicators {
+        display: none;
+      }
+      .el-carousel{
+        display: flex;
+        justify-content: center;
+        /* margin-bottom:200px; */
+      }
+      .el-carousel__arrow i{
+        font-size:36px;
+        color:#4f8ef0;
+      }
+      .el-carousel__arrow i:hover{
+      color: #065c95!important;
+	}
+
+	.school_index{
+	color:#738db3;
+	}
+	.school_m{
+	margin:0 5px;
+	}
+	[v-cloak]{
+			display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <div>
+        <!-- 顶部导航 -->
+        <div class="home_nav_top">
+          <div class="container_1200 row_flex al_flex be_flex ">
+            <div class="home_nav_top_left">
+              <img v-cloak :src="headerLogo.data_img" alt="" />
+            </div>
+            <div class="row_flex ar_flex end_flex al_flex ">
+                <!-- 导航栏 -->
+                <div v-for="(value,index) of linkItems.children" :key="index">
+                    <a v-if="value.target_id1=='0'" class="nav_top_item"  href="../../../../pc/index.html">
+                        {{value.navigation_name}}
+                    </a>
+                    <a v-else class="nav_top_item"  :href=`school.html?target_id1=${value.target_id1}`>
+                        {{value.navigation_name}}
+                    </a>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- banner图片 -->
+        <div class="bg_banner img_flex">
+          <img class="bg_banner_img" :src="bannerUrl.event_img" alt="" />
+        </div>
+
+        <!-- 内容 -->
+        <div style="height:10px;"></div>
+        <div class="container_1200">
+          <div>
+            <a v-if="resBody.column_pid!=''" :href="`school.html?target_id1=${resBody.column_pid}`" class="school_index">
+            <span class=" color_tit color_tit1">{{resBody.column_pid_name}}</span><span class="school_m">/</span>
+          </a>
+            <span class=" color_tit color_tit2">{{resBody.column_name}}</span>
+          </div>
+        </div>
+        <div class="grey_line">
+          <div class="news_banner">
+            <el-carousel :interval="3000" arrow="always" v-if="articles.length>0">
+              <el-carousel-item v-for="(item,index) of articles" :key="index">
+                <img class="carouse_img" :src="item.additional_cover" alt="" />
+                <div class="news_banner_into  ">
+                  <div class="news_banner_into_text">
+                    <span>{{ item.article_name}}</span>
+                  </div>
+                </div>
+              </el-carousel-item>
+            </el-carousel>
+          </div>
+        </div>
+
+        <!-- 页底 -->
+        <footer>
+          <div class="container_1200 row_flex be_flex al_flex">
+            <div class="col_flex be_flex">
+              <div class="row_flex ">
+                <div class="col_flex wr_flex foot_nav ">
+                  <!-- 底部左侧导航 -->
+                    <!-- <a v-for="(v,i) of resFooter.linkItems" :key="i" href="#" class="foot_top_item" >{{v.navigation_name}}</a> -->
+                    <a v-for="(value,index) of resFooter.linkItems" :key="index" class="foot_top_item" :href=`school.html?target_id1=${value.target_id1}`>
+                      {{value.navigation_name}}
+                  </a>
+                </div>
+                <div class="col_flex wr_flex foot_info ">
+                  <a class="foot_top_item">{{resFooter.enrollment_link.data_name}} : {{resFooter.enrollment_link.data_remark}}</a>
+                  <a class="foot_top_item">{{resFooter.professional_consultation.data_name}} : {{resFooter.professional_consultation.data_remark}}</a>
+                  <a class="foot_top_item">
+                      {{resFooter.copyright.data_name}} : {{resFooter.copyright.data_remark}}
+                  </a>
+                  <a class="foot_top_item">
+                      {{resFooter.address.data_name}} : {{resFooter.address.data_remark}}
+                  </a>
+                </div>
+              </div>
+              <div class="school_addr">
+                  <!--底部学校介绍 -->
+                  {{resFooter.school_introduction.data_remark}}
+              </div>
+            </div>
+            <div><img :src="resFooter.logo2.data_img" alt="" /></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- 引入js -->
+    <script src="./publicJs/pub.js"></script>
+    <script src="./publicJs/jquery-1.12.4.js"></script>
+    <script src="./publicJs/axios.js"></script>
+    <script src="./publicJs/vue.js"></script>
+    <script src="./publicJs/element.js"></script>
+    <script src="./addJs/ic_school_honer.js"></script>
+    <script src="./addJs/ic_foot.js"></script>
+  </body>
+</html>

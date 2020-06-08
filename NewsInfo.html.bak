@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>标题</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/element.css" />
+    <link rel="stylesheet" href="./css/head.css" />
+    <link rel="stylesheet" href="./css/newsInfo.css" />
+    <style>
+      .main_bottom{
+        margin-bottom:112px!important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <div>
+        <!-- 顶部导航 -->
+        <div class="home_nav_top">
+            <div class="container_1200 row_flex al_flex be_flex ">
+              <div class="home_nav_top_left">
+                <img v-cloak :src="headerLogo.data_img" alt="" />
+              </div>
+              <div class="row_flex ar_flex end_flex al_flex ">
+                  <!-- 导航栏 -->
+                  <div v-for="(value,index) of linkItems.children" :key="index">
+                      <a v-if="value.target_id1=='0'" class="nav_top_item"  href="../../../../pc/index.html">
+                          {{value.navigation_name}}
+                      </a>
+                      <a v-else class="nav_top_item"  :href=`school.html?target_id1=${value.target_id1}`>
+                          {{value.navigation_name}}
+                      </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg_banner img_flex">
+            <img class="bg_banner_img" :src="bannerUrl.event_img" alt="" />
+          </div>
+
+        <div class="container_1200 new_margin">
+          <div class="news_tittle">
+            <!-- <a href="" class="after_pag">{{resBody.column_name}}</a> -->
+            <!-- <a v-if="resBody.column_pid!=''" :href="`./school.html?target_id1=${resBody.column_pid}`" class="school_index">
+              <span style="color:#738db3" class=" color_tit color_tit1">{{resBody.column_pid_name}}</span><span class="school_m">/</span>
+            </a>
+            <a class="major_color" >
+                <span class=" color_tit color_tit2">{{resBody.column_name}}</span>
+            </a> -->
+            <a v-if="resBody.column_type=='column_3'" :href="`school.html?target_id1=${resPody.column_pid}`" class="school_index">
+                <span class=" color_tit color_tit1">{{resPody.column_pid_name}}</span><span class="school_m">/</span>
+            </a>
+
+            <a v-if="resBody.column_type=='column_2'" :href="`school.html?target_id1=${resBody.column_pid}`" class="school_index">
+              <span class=" color_tit color_tit1">{{resBody.column_pid_name}}</span><span class="school_m">/</span>
+            </a>
+
+            <a v-if="resPody.column_type=='column_2'" :href="`third_column.html?column_id=${resBody.column_pid}`" class="school_index">
+                <span class=" color_tit color_tit1">{{resBody.column_pid_name}}</span><span class="school_m">/</span>
+            </a>
+            
+            <a v-if="resBody.column_type=='column_2'&&resBody.column_name=='招生政策'" class="major_color">
+                <span class=" color_tit color_tit1">{{resBody.column_name}}</span><span class="school_m"></span>
+            </a>
+            <a v-else-if="resBody.column_type=='column_2'&&resBody.column_name=='招生信息'" class="major_color">
+                <span class=" color_tit color_tit1">{{resBody.column_name}}</span><span class="school_m"></span>
+            </a>
+            <a v-else-if="resBody.column_type=='column_2'" :href="`articale_list.html?column_id=${resBody.column_id}`" class="major_color">
+                <span class=" color_tit color_tit1">{{resBody.column_name}}</span><span class="school_m"></span>
+            </a>
+            <a v-if="resBody.column_type=='column_3'" :href="`articale_list.html?column_id=${resBody.column_id}`" class="major_color">
+                <span class=" color_tit color_tit1">{{resBody.column_name}}</span><span class="school_m"></span>
+            </a>
+
+            <span v-if="resBody.column_name=='新闻中心'" class=" color_tit color_tit2">{{resBody.column_name}}</span> 
+          </div>
+          <!-- 新闻内容-->
+          <div class="row_flex be_flex main_bottom">
+            <div v-if="article.ueditor_text!=''" class="add_us_introduce new_info">
+              <div class="news_content_title">
+                <!-- 新闻标题 -->
+                  {{article.article_name}}
+              </div>
+              <div class="new_content_time ">
+                <!-- 供稿人  发布时间 -->
+                <span v-if="article.publisher!='AUTO'">供稿人 :{{article.publisher}}&nbsp;&nbsp;&nbsp;</span>
+                <span v-if="article.update_time">发布时间:{{article.update_time}}</span>
+              </div>
+              <div  class="news_text" v-html="article.ueditor_text">
+                <!-- 文章详情 -->
+                  {{article.ueditor_text}}
+              </div>
+            </div>
+            <div v-else>
+              <p>
+                <img  style="width: 90%;" :src="article.article_picture[0].file_img" alt="">
+              </p>
+            </div>
+
+            <div>
+              <div class="box_sadow">
+                <div class="new_news">{{resBody.column_name}}</div>
+                <div class="new_lit_list">
+                  <!-- 右侧 文章列表  -->
+                    <div v-for="(value,index) of news_List">
+                          <a v-if="value.article_id==article_id" :href="`./NewsInfo.html?column_id=${value.column_id}&article_id=${value.article_id}`" :title="value.article_name" class="new_news_tit new_news_tit_first "
+                      >
+                        <span class="under_line act_line">{{value.article_name}}</span
+                        >
+                      </a>
+                      <a v-else :href="`./NewsInfo.html?column_id=${value.column_id}&article_id=${value.article_id}`" :title="value.article_name" class="new_news_tit"
+                      >
+                        <span class="under_line act_line">{{value.article_name}}</span
+                        >
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="underline"></div>
+
+        <!-- 页底 -->
+        <footer>
+          <div class="container_1200 row_flex be_flex al_flex">
+            <div class="col_flex be_flex">
+              <div class="row_flex ">
+                <div class="col_flex wr_flex foot_nav ">
+                  <!-- 底部左侧导航 -->
+                    <!-- <a v-for="(v,i) of resFooter.linkItems" :key="i" href="#" class="foot_top_item" >{{v.navigation_name}}</a> -->
+                    <a v-for="(value,index) of resFooter.linkItems" :key="index" class="foot_top_item" style="width: 60px;" :href=`school.html?target_id1=${value.target_id1}`>
+                      {{value.navigation_name}}
+                  </a>
+                </div>
+                <div class="col_flex wr_flex foot_info ">
+                  <a class="foot_top_item">{{resFooter.enrollment_link.data_name}} : {{resFooter.enrollment_link.data_remark}}</a>
+                  <a class="foot_top_item">{{resFooter.professional_consultation.data_name}} : {{resFooter.professional_consultation.data_remark}}</a>
+                  <a class="foot_top_item">
+                      {{resFooter.copyright.data_name}} : {{resFooter.copyright.data_remark}}
+                  </a>
+                  <a class="foot_top_item">
+                      {{resFooter.address.data_name}} : {{resFooter.address.data_remark}}
+                  </a>
+                </div>
+              </div>
+              <div class="school_addr">
+                  <!--底部学校介绍 -->
+                  {{resFooter.school_introduction.data_remark}}
+              </div>
+            </div>
+            <div><img :src="resFooter.logo2.data_img" alt="" /></div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- 引入js -->
+    <!-- data.js多余的可以 但是原文件所带先留着 -->
+    <!-- <script src="./addJs/data.js"></script> -->  
+    <script src="./publicJs/pub.js"></script>
+    <script src="./publicJs/jquery-1.12.4.js"></script>
+    <script src="./publicJs/base.js"></script>
+    <script src="./publicJs/axios.js"></script>
+    <script src="./publicJs/vue.js"></script>
+    <script src="./publicJs/element.js"></script>
+    <script src="./addJs/ic_news_info.js"></script>
+    <script src="./addJs/ic_foot.js"></script>
+  </body>
+</html>
